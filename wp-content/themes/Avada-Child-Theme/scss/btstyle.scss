@@ -1,0 +1,123 @@
+@import "mixin";
+@import "color";
+
+::selection {
+    color: #fff;
+    background: orange;
+}
+
+.dl-post {
+
+    img {
+        width: 100%;
+    }
+    
+    &__card {
+        position: relative;
+
+        &:hover .dl-post__detail-wrapper {
+            opacity: 100%;
+        }
+    }
+
+    &__detail-wrapper {
+        background-color: rgba(#000, .8);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: .3s opacity;
+    }
+
+    &__detail {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        .card-title {
+            margin-bottom: 0;
+            h3 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+
+    &--active {
+        background-color: #333 !important;
+        .fusion-button-text {
+            color: #fff !important;
+        }
+    }
+    
+    @include media-breakpoint-only(lg) {
+        column-count: 3;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 4;
+    }
+
+}
+
+.tooltip-inner {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #fff !important;
+}
+.loading {
+    margin-top: 32px;
+    &__text {
+        text-align: center;
+        font-weight: bold;
+        color: $primary;
+    }
+}
+#sdm_search_form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home-search-form.fusion-form-form-wrapper .fusion-form-field {
+    width: auto; 
+
+    &.fusion-form-submit-field {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        button {
+            height: 50px;
+        }
+    }
+}
+
+.sdm_pagination {
+    display: flex;
+    margin: 24px auto;
+    .page-numbers {
+        display: block;
+        height: 48px;
+        line-height: 1;
+        aspect-ratio: 1;
+        border: 1px solid #cecece;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.next, &.prev {
+            aspect-ratio: auto;
+            padding: 0 10px;
+        }
+
+        &.current {
+            background-color: $primary;
+            font-weight: 700;
+        }
+    }
+}

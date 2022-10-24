@@ -1,6 +1,6 @@
 <?php
 
-function sdm_search_form_shortcode( $args ) {
+function sdm_search_result_shortcode( $args ) {
 	$atts = shortcode_atts(
 		array(
 			'fancy'                  => '',
@@ -14,7 +14,7 @@ function sdm_search_form_shortcode( $args ) {
 	global $wpdb;
 
 	// Check if we have a search value posted
-	$s_term = isset( $_POST['sdm_search_term'] ) ? stripslashes( sanitize_text_field( esc_html( $_POST['sdm_search_term'] ) ) ) : '';
+	$s_term = isset( $_GET['sdm_search_term'] ) ? stripslashes( sanitize_text_field( esc_html( $_GET['sdm_search_term'] ) ) ) : '';
 
 	if ( ! empty( $s_term ) ) {
 		// we got search term posted
@@ -71,6 +71,30 @@ function sdm_search_form_shortcode( $args ) {
 			$result_output = '<h2 class="sdm_search_result_heading">' . __( 'Nothing found for ', 'simple-download-monitor' ) . '"' . $s_term . '".</h2>';
 		}
 	}
+	// $out  = '';
+	// $out .= '<form id="sdm_search_form" class="' . sanitize_html_class( $atts['class'], '' ) . '" method="POST">';
+	// $out .= '<input type="search" class="search-field" name="sdm_search_term" value="' . $s_term . '" placeholder="' . sdm_sanitize_text( $atts['placeholder'] ) . '">';
+	// $out .= '<input type="submit" class="sdm_search_submit" name="sdm_search_submit" value="Search">';
+	// $out .= '</form>';
+	$out = isset( $result_output ) ? $result_output : '';
+
+	//return $out;
+	return apply_filters( 'sdm_search_result_shortcode_output', $out, $posts_collection, $keywords_searched, $atts );
+}
+
+function sdm_search_form_shortcode($args)
+{
+	$atts = shortcode_atts(
+		array(
+			'fancy'                  => '',
+			'class'                  => '', // wrapper class
+			'placeholder'            => 'Search...', // placeholder for search input
+			'description_max_length' => 50, // short description symbols count
+		),
+		$args
+	);
+	// Check if we have a search value posted
+	$s_term = isset( $_GET['sdm_search_term'] ) ? stripslashes( sanitize_text_field( esc_html( $_GET['sdm_search_term'] ) ) ) : '';
 	$out  = '';
 	$out .= '<form id="sdm_search_form" class="' . sanitize_html_class( $atts['class'], '' ) . '" method="POST">';
 	$out .= '<input type="search" class="search-field" name="sdm_search_term" value="' . $s_term . '" placeholder="' . sdm_sanitize_text( $atts['placeholder'] ) . '">';
@@ -78,7 +102,7 @@ function sdm_search_form_shortcode( $args ) {
 	$out .= '</form>';
 	$out .= isset( $result_output ) ? $result_output : '';
 
-	return $out;
+	return apply_filters( 'sdm_search_form_shortcode_output', $out, $s_term, $atts );
 }
 
 function sdm_generate_search_result_using_template( $posts_collection, $args = array() ) {

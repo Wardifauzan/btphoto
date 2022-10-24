@@ -1,0 +1,19 @@
+$breakpoints: (
+  'sm':  576px,
+  'md': 768px,
+  'lg':  992px,
+  'xl': 1200px
+) !default;
+
+@mixin media-breakpoint-only($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media(min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+    @else {
+        @media(min-width: 0) {
+            @content;
+        }
+    }
+}

@@ -26,7 +26,6 @@ wp-config.php
 # Example plugin
 /wp-content/plugins/fusion-core
 /wp-content/plugins/fusion-builder
-/wp-content/plugins/add-search-to-menu
 
 # Uploads
 /wp-content/uploads/
@@ -49,4 +48,3 @@ wp-config.php
 # uncomment the next line
 #/wp-content/themes
 /wp-content/themes/avada
-/wp-content/themes/twenty*

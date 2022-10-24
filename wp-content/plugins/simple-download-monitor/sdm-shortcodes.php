@@ -27,6 +27,7 @@ function sdm_register_shortcodes() {
 
 	add_shortcode( 'sdm_download_categories_list', 'sdm_download_categories_list_shortcode' );
 	add_shortcode( 'sdm_search_form', 'sdm_search_form_shortcode' );
+	add_shortcode( 'sdm_search_result', 'sdm_search_result_shortcode');
 
 	add_shortcode( 'sdm_show_download_info', 'sdm_show_download_info_shortcode' );
 }
@@ -384,7 +385,7 @@ function sdm_handle_category_shortcode( $args ) {
 		}
 
 		// Return results
-		return apply_filters( 'sdm_category_download_items_shortcode_output', $output, $args, $get_posts );
+		return apply_filters( 'sdm_category_download_items_shortcode_output', $output, $args, $get_posts, $query->found_posts );
 	}  // End else iterate cpt's
 }
 
