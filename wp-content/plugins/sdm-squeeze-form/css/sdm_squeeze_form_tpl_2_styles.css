@@ -1,0 +1,134 @@
+/* Template 2 style */
+
+.sdm_sf_tpl_2_wrap{
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 0 0 5px 0 lightgrey;
+    margin: 10px auto 10px;
+}
+.sdm_sf_tpl_2_thumb{
+    display: none;
+    width: 300px;
+    padding-right: 20px; 
+    margin: auto;
+}
+.sdm_sf_tpl_2_thumb img{
+    width: 100%;
+    max-height: 350px;
+}
+.sdm_sf_tpl_2_form{
+    width: 100%;
+    margin: 0px auto;
+}
+.sdm_sf_tpl_2_title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 5px auto 10px;
+}
+.sdm_sf_tpl_2_description{
+    text-align: center;
+    margin: 5px auto 0px;
+    width: 80%
+}
+.sdm_sf_tpl_2_description p{
+    width: 100%;
+    font-size: 16px !important;
+}
+.sdm_sf_tpl_2_msg{  /* if delivered by email is on*/           
+    margin: 20px 5px 10px;
+}
+.sdm_sf_tpl_2_msg_text{
+    background: #eff9f1;
+    border-left: 3px solid #4ab866;
+}
+.sdm_sf_tpl_2_msg p{
+    margin: 0px;
+    padding: 20px 5px;
+    background: #eff9f1;
+    font-size: 16px;
+    text-align: center;
+}
+.sdm_sf_tpl_2_input_field{
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 20px;
+}
+.sdm_sf_tpl_2_input{
+    margin-bottom: 10px;
+}
+.sdm_sf_tpl_2_input input{
+    min-height: 40px;
+    width: 90%;
+    box-shadow: none;
+}
+
+.sdm_sf_tpl_2_input_info{
+    border: none !important;
+    background-color: #fff !important;
+    border-bottom: 2px solid grey !important;
+    outline: none !important;
+}
+.sdm_sf_tpl_2_input_info input::placeholder{
+    color: grey;
+}
+.sdm_sf_tpl_2_input_info:focus{
+    padding: 0px 2px;
+    color: black;
+    background-color: #fff !important;
+    transition: all 0.1s linear; 
+}
+.sdm_sf_tpl_2_input_submit{
+    font-size: 18px;
+    color: grey;
+    margin-top: 30px;
+    background-color: #fff;
+    border: 2px solid grey;
+    border-radius: 20px;
+    max-width: 100%;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* for validation error classes*/
+.sdm_sf_tpl_2_error_container{
+    display: block;
+    font-size: 14px;
+    background: transparent;
+    color: red;
+    padding: 3px 10px;
+}
+.sdm-sf-tpl2-recaptcha-box{
+    display: flex;
+    justify-content: center;
+    transform:scale(0.78);
+    -webkit-transform:scale(0.78);
+}
+@media only screen and (min-width: 768px) {
+    /* For tablets */
+    .sdm_sf_tpl_2_wrap{
+        max-width: 600px;
+        box-sizing: content-box;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For desktop */
+    .sdm_sf_tpl_2_wrap{
+        max-width: 510px;
+        background-color: #fff;
+        box-sizing: content-box;
+        display: flex;
+        padding: 40px;
+        margin: 10px 0px 10px 0px;
+    }
+    .sdm_sf_tpl_2_thumb{
+        display: inline;
+    }
+    .sdm_sf_tpl_2_form{
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,8 @@
+Basic Usage Instructions
+===========================
+#1) Install the addon just like any wordpress plugin.
+#2) Use the shortcode inserter (in the post/page editor) to add a squeeze form for any download.
+#3) When visitors submit the squeeze form, the detials are captured by this addon. Go to the "Squeeze Form" menu link from the SDM admin menu to see all the submissions.
+#4) The submission details can be exported to a CSV file.
+#5) There is an option to signup the user to MailChimp list when they submit the squeeze form.
+

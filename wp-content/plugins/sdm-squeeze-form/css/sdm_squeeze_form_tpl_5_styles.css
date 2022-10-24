@@ -1,0 +1,183 @@
+.sdm_sf_tpl5{
+	background: rgba(0,0,0,0.7);
+	height: 100%;
+	min-width: 100% !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000000;
+	overflow: auto;
+}
+.sdm_sf_tpl5_close{
+    font-size: 50px;    
+    color: #bfbfbf;
+    position: absolute;
+    top: 5px;
+    right: 30px;    
+}
+.sdm_sf_tpl5_close:hover{
+    cursor: pointer;
+    color: #e6e6e6;
+    transition: 0.4s;
+}
+.sdm_sf_tpl5_modal{
+	margin: 20px;
+	background: rgba(255,255,255,1);
+	border-radius: 5px;
+	max-width: 90%;
+}
+.sdm_sf_tpl5_left_col{
+	background: white;
+	padding: 0px;
+}
+.sdm_sf_tpl5_img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sdm_sf_tpl5_img img{
+	max-width: 100%;
+	max-height: 400px;
+}
+.sdm_sf_tpl5_title{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+	max-width: 90%;
+	font-size: 30px;
+}
+.sdm_sf_tpl5_download_file_info{
+	text-align: center;
+}
+.sdm_sf_tpl5_right_col{
+	overflow: auto;
+	background: white;
+	padding: 10px 10px 20px 10px;
+}
+.sdm_sf_tpl5_description{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	font-size: 16px !important;
+}
+.sdm_sf_tpl5_file_size, .sdm_sf_tpl5_version{
+	font-size: 16px !important;
+	text-align: center;
+}
+.sdm_sf_tpl5_form{
+	margin-top: 10px;
+}
+.sdm_sf_tpl5_input_name, .sdm_sf_tpl5_input_email{
+	margin-top: 10px !important;
+	text-align: center;	
+}
+.sdm_sf_tpl5_input_name, .sdm_sf_tpl5_input_email, .sdm_sf_tpl5_input_submit{
+	width: 80%;
+}
+.sdm_sf_tpl5_input_submit{
+	margin-top: 10px;
+}
+.sdm_sf_tpl5_input input,.sdm_sf_tpl5_input button{
+	display: flex;	
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.sdm_sf_tpl5_input_cancel button{
+	width: 80%;
+	margin-top: 10px;
+	display: flex;
+	border: 1px solid grey;
+	background-color: white;
+	color: grey;	
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.sdm_sf_tpl5_input_cancel button:focus{
+	color: red;
+	border: 1px solid red;
+}
+.sdm-termscond-checkbox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sdm_sf_tpl5_error_container{
+	color: red;
+	font-size: 12px;
+	text-align: center;
+}
+.sdm_sf_tpl5_error_foc:focus{
+	outline: none !important;
+    border: 0.3px solid red !important;
+    box-shadow: 0 0 5px 0 red !important;
+}
+
+.sdm-sf-tpl5-recaptcha-box{
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+	/*For tablets*/
+	.sdm_sf_tpl5_modal{
+  	padding: 20px;
+  	margin: auto 70px;
+   }
+	.sdm_sf_tpl5_img img{
+	max-width: 100%;
+	}
+	.sdm_sf_tpl5_close{
+    position: absolute;
+    top: 5px;
+    right: 20px;    
+	}    
+}
+@media only screen and (min-width: 1024px) {
+    /*   For desktop: */
+  .sdm_sf_tpl5_modal{
+  	display: flex;
+  	margin: auto;
+  	padding: 0px;
+  }
+  .sdm_sf_tpl5{
+  	overflow: none;
+  }
+  .sdm_sf_tpl5_left_col, .sdm_sf_tpl5_right_col{
+  	margin: 30px;
+  }
+  .sdm_sf_tpl5_img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+ .sdm_sf_tpl5_img img{
+	max-width: 400px;
+	max-height: 400px;
+	
+ }
+ .sdm_sf_tpl5_input_cancel button{
+	display: none;
+ }
+ .sdm_sf_tpl5_input_name, .sdm_sf_tpl5_input_email{
+	width: 400px;
+ }
+
+ .sdm_sf_tpl5_title{
+	max-width: 400px;
+	font-size: 30px;
+ } 
+
+.sdm_sf_tpl5_description{
+	width: 400px;
+	margin-bottom: 10px;
+	font-size: 16px !important;
+}
+
+}
